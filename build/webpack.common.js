@@ -44,6 +44,10 @@ const config = {
     new webpack.ProvidePlugin({
       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     }),
+    new webpack.DefinePlugin({
+      CLIENT_ID: JSON.stringify(process.env.CLIENT_ID),
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
+    }),
     new ExtractTextPlugin('/bundle.css')
   ]
 };

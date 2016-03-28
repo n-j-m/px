@@ -1,12 +1,14 @@
 import { RECEIVE_PICS } from '../mutation-types'
 
 const initialState = {
+  nextPageToken: null,
   pics: []
 }
 
 const mutations = {
   [RECEIVE_PICS](state, pics) {
-    state.pics = pics
+    state.nextPageToken = pics.nextPageToken
+    state.pics = pics.pics
   }
 }
 

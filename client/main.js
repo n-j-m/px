@@ -2,7 +2,7 @@ import Vue from 'vue'
 import createRouter from './createRouter'
 import Root from './components/Root.vue'
 
-if (process.env.NODE_ENV !== 'production') {
+if (NODE_ENV !== 'production') {
   Vue.config.debug = true
 }
 

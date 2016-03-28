@@ -8,15 +8,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a v-link="{path: '/', exact: true}" class="navbar-brand">gradebook</a>
+        <a v-link="{path: '/', exact: true}" class="navbar-brand">
+          <div v-if="processing" class="la-sm la-dark la-ball-clip-rotate">
+            <div></div>
+          </div>
+          gradebook
+        </a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li v-link-active><a v-link="{path: '/', exact: true}">Home</a></li>
         </ul>
-        <div v-if="processing" class="navbar-text navbar-right la-sm la-dark la-ball-clip-rotate">
-          <div></div>
-        </div>
       </div>
     </div>
   </nav>

@@ -1,0 +1,12 @@
+{
+  "libraries": [
+    {
+      "name": "drive",
+      "version": "v3"
+    }
+  ],
+  "scopes": [
+    "https://www.googleapis.com/auth/drive.readonly",
+    "https://www.googleapis.com/auth/drive.photos.readonly"
+  ]
+}

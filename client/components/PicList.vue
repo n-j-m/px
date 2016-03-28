@@ -27,6 +27,9 @@ export default {
           intermediate = []
         }
       })
+      if (intermediate.length > 0) {
+        result.push(intermediate)
+      }
       return result
     }
   }

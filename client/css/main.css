@@ -1,5 +1,22 @@
-.pic-item {
-  height: 250px;
+.pic-item .panel-body {
+  width: 167px;
+  height: 125px;
+}
+
+.panel-body img {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  max-height: 100%;
+  max-width: 100%''
+}
+
+.panel {
+  width: 169px;
+}
+.panel-body {
+  width: 167px;
+  padding: 0;
 }
 
 .pic-item-heading {

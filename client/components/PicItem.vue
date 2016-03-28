@@ -5,7 +5,7 @@
         {{pic.title}}
       </div>
       <div class="panel-body">
-          <img :src="pic.thumbnailUrl" />
+        <img :src="pic.thumbnailUrl" />
       </div>
     </div>
   </a>
@@ -24,11 +24,9 @@ export default {
   },
   methods: {
     handleIn(ev) {
-      console.log('in')
       this.cls['panel-default'] = true
     },
     handleOut(ev) {
-      console.log('out')
       this.cls['panel-default'] = false
     }
   }
