@@ -1,0 +1,8 @@
+.pic-item {
+  height: 250px;
+}
+
+.pic-item-heading {
+  height: 65px;
+  overflow-y: auto;
+}
