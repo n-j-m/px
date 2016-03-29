@@ -26,7 +26,7 @@ const config = {
       { test: /\.vue$/, loader: 'vue' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader'), include: [
         BuildConstants.CLIENT_PATH,
-        path.resolve('./node_modules', 'bootstrap')
+        path.resolve('./node_modules', 'material-design-lite')
       ] },
       { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
@@ -42,7 +42,8 @@ const config = {
       appMountId: 'root'
     }),
     new webpack.ProvidePlugin({
-      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch',
+      'componentHandler': 'imports?this=>global!exports?global.componentHandler!material-design-lite'
     }),
     new webpack.DefinePlugin({
       CLIENT_ID: JSON.stringify(process.env.CLIENT_ID),

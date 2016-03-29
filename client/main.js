@@ -6,9 +6,9 @@ if (NODE_ENV !== 'production') {
   Vue.config.debug = true
 }
 
-import 'bootstrap/dist/css/bootstrap.css'
-import './css/ball-clip-rotate.css'
-import './css/main.css'
+// css imports
+import 'material-design-lite/material.css'
+console.log('mdl:', componentHandler)
 
 const router = createRouter(Vue)
 
