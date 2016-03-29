@@ -39,7 +39,8 @@ const config = {
     new HtmlWebpackPlugin({
       title: require('../package.json').name,
       template: path.resolve(__dirname, 'index-template.html'),
-      appMountId: 'root'
+      appMountId: 'root',
+      favicon: path.resolve(__dirname, 'favicon.png')
     }),
     new webpack.ProvidePlugin({
       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch',

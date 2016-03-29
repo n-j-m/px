@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router'
-import Home from './components/Home.vue'
+import Photos from './components/Photos.vue'
 import Login from './components/Login.vue'
 import api from 'api'
 const { isAuthed } = api
@@ -14,7 +14,7 @@ export default function createRouter(Vue) {
 
   router.map({
     '/': {
-      component: Home
+      component: Photos
     },
     '/login': {
       component: Login

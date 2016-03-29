@@ -1,7 +1,7 @@
 import api from 'api'
 import { PROCESSING, RECEIVE_PICS, ERROR } from './mutation-types'
 
-export function retreivePics({dispatch}) {
+export function retrievePics({dispatch}) {
   dispatch(PROCESSING, 1)
   api.getPics()
     .then(data => {

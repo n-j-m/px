@@ -2,7 +2,6 @@ import apiLoader from './apiLoader'
 import app_settings from 'json!./app_settings.json'
 
 export function isAuthed() {
-  console.log('isAuthed')
   return new Promise((resolve, reject) => {
     apiLoader.auth()
       .then(() => {

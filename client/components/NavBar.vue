@@ -1,36 +1,37 @@
 <template>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a v-link="{path: '/', exact: true}" class="navbar-brand">
-          <div v-if="processing" class="la-sm la-dark la-ball-clip-rotate">
-            <div></div>
-          </div>
-          gradebook
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">
+        {px}
+      </span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" v-link="{path: '/', exact: true}">
+          Home
         </a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li v-link-active><a v-link="{path: '/', exact: true}">Home</a></li>
-        </ul>
-      </div>
+        <mdl-spinner :active="isActive"></mdl-spinner>
+      </nav>
     </div>
-  </nav>
+  </header>
 </template>
 
 <script>
+import vmdl from 'vue-mdl'
+
 export default {
+  components: {
+    mdlSpinner: vmdl.components['mdlSpinner']
+  },
   vuex: {
     getters: {
       processing(state) {
         return state.app.processing
       }
+    }
+  },
+  computed: {
+    isActive() {
+      return this.processing > 0
     }
   }
 }

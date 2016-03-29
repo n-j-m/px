@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <pic-row v-for="picset in processedPics" :picset="picset"></pic-row>
-  </div>
+  <pic-row v-for="picset in processedPics" :picset="picset"></pic-row>
 </template>
 
 <script>
